@@ -1,10 +1,11 @@
+import "./ListaAnimes.css"
+
 export default function ListaAnimes({ animes, eliminarAnime, updateAnime }) {
     return (
         <>
             {animes.map((anime) => (
                 <div
-                    className="container_anime card container-sm mb-3 p-3"
-                    style={{ width: "450px" }}
+                    className="container_anime card mb-3 p-3"
                     key={anime.id}
                 >
                     <div className="list-group-item d-flex justify-content-between align-items-start">

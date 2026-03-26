@@ -88,7 +88,7 @@ export default function App() {
         </div>
         <div className="container_lista_animes mt-2">
           <h3 className="text-center">Lista de Animes</h3>
-          <div className="animes d-grid justify-content-start">
+          <div className="animes">
             <ListaAnimes animes={animes} eliminarAnime={eliminarAnime} updateAnime={updateAnime} />
           </div>
         </div>
