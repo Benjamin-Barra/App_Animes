@@ -41,6 +41,10 @@ export default function App() {
     {
       id: 7,
       nombre_cat: "Rom-Com"
+    },
+    {
+      id: 8,
+      nombre_cat: "Gakuen"
     }
   ] 
 
