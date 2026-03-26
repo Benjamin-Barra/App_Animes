@@ -25,6 +25,22 @@ export default function App() {
     {
       id: 3,
       nombre_cat: "Isekai"
+    },
+    {
+      id: 4,
+      nombre_cat: "Seinen"
+    },
+    {
+      id: 5,
+      nombre_cat: "Mecha"
+    },
+    {
+      id: 6,
+      nombre_cat: "Kodomo"
+    },
+    {
+      id: 7,
+      nombre_cat: "Rom-Com"
     }
   ] 
 
@@ -41,18 +57,23 @@ export default function App() {
 
   const addAnime = (e) => {
     e.preventDefault()
-    const animeAdd = {
-      ...anime,
-      id: Date.now()
+    if (anime.nombre.trim() === "" || anime.categoria.trim() === "") {
+      return alert("Completa los campos")
+    } else {
+      const animeAdd = {
+        ...anime,
+        id: Date.now()
+      }
+      
+      setAnimes([...animes, animeAdd])
+
+      setAnime({
+        nombre: "",
+        categoria: "",
+        visto: false
+      })
     }
     
-    setAnimes([...animes, animeAdd])
-
-    setAnime({
-      nombre: "",
-      categoria: "",
-      visto: false
-    })
     
   }
 
